@@ -11,6 +11,9 @@ public class EventIssue {
     private String branchName;
     private Date createdAt;
     private String description;
+
+    private Date dueDate;
+
     private Long id;
     private Long iid;
 
@@ -144,6 +147,14 @@ public class EventIssue {
 
     public void setAction(String action) {
         this.action = action;
+    }
+
+    public Date getDueDate() {
+        return dueDate;
+    }
+
+    public void setDueDate(Date dueDate) {
+        this.dueDate = dueDate;
     }
 
     @Override

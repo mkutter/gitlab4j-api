@@ -12,6 +12,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.mockito.BDDMockito.given;
 import static org.mockito.Mockito.mock;
 
+import java.util.Date;
 import java.util.logging.Level;
 
 import javax.servlet.ServletInputStream;
@@ -75,6 +76,7 @@ public class TestGitLabApiEvents {
         assertNotNull(idChange);
         assertEquals(123, (int)idChange.getPrevious());
         assertEquals(456, (int)idChange.getCurrent());
+        assertEquals(new Date(1386090943000L), issueEvent.getObjectAttributes().getDueDate());
     }
 
     @Test
